@@ -1,0 +1,25 @@
+the basic structure for a form
+<form action="destination" method="get or post">
+  <input type="submit">
+</form>
+
+example for destination:
+  http://www.server.com/sub/program.php
+  sub/program.php
+  program.php
+
+get method is like sending a search key word in Google.
+  default method is "get"
+  cannot keep secret
+  for only few hundred words
+  do not use the get method for password: <input type="password" name="userpassword">
+
+post method is used when you do not want to see data
+  you can send anything with post method
+
+Attributes:
+  to be submitted correctly, each input field must have a name attribute
+  value="" fixes what is show at the start. (a textarea will have an fixed text)
+  placeholder="" shows useful text which disappear when the user enters something
+  autofocus: emphasize a field (bigger border)
+  required: 
