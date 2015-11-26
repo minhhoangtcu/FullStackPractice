@@ -1,44 +1,63 @@
 <html>
 
 <head>
+  <meta name="Minh Hoang" content="Dating Site">
 </head>
 
 <body>
   <h1>Please Enter Your Details For Our Dating Website!</h1>
-  <form action="" method="post">
+  <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
     <fieldset>
       <legend>
         Your Face:
       </legend>
-      Your image:
-      <form action="destination" method="post" enctype="multipart/form-data">
-        <input type="file" name="fileToUpload">
-      </form>
-      <br> Image preview:
+      <label for="fileToUpload">Your image:</label>
+      <input type="file" id="fileToUpload" name="fileToUpload" required>
+      <br>
+      <label for="preview">Image preview:</label>
+      <img src="" id="preview">
     </fieldset>
 
     <fieldset>
       <legend>
         Your General Details
       </legend>
-      Name:
-      <input type="text" name="name" placeholder="Your full name">
+      <label for="">Name:</label>
+      <input type="text" name="name" placeholder="Your full name" required>
       <br> Gender:
-      <input type="radio" name="male"> Male
-      <input type="radio" name="female"> Female
-      <br> Age:
-      <input type="number" name="age" min="0" max="100" value="18">
-      <br> Date of birth:
-      <input type="date" name="bday">
-      <br> Farorite color:
-      <input type="color" name="fcolor">
-      <br> Which country:
-      <select name="country">
+      <input type="radio" id="male" name="male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="female" required>
+      <label for="female">Female</label>
+      <br>
+      <label for="">Age:</label>
+      <input type="number" id="age" name="age" min="0" max="100" value="18" required>
+      <br>
+      <label for="bday">Date of birth:</label>
+      <input type="date" id="bday" name="bday">
+      <br>
+      <label for="fcolor">Farorite color:</label>
+      <input type="color" id="fcolor" name="fcolor">
+      <br>
+      <label for="country">Which country:</label>
+      <select id="country" name="country">
+        <option value="none">
+          None
+        </option>
         <option value="usa">
           United States
         </option>
         <option value="vietnam">
           Vietnam
+        </option>
+        <option value="england">
+          England
+        </option>
+        <option value="canada">
+          Canada
+        </option>
+        <option value="mexico">
+          Mexico
         </option>
       </select>
       <br>
@@ -48,26 +67,34 @@
       <legend>
         Your Indicator
       </legend>
-      Height: Short
-      <input type="range" name="height"> Tall
-      <br> Salary: Poor
-      <input type="range" name="salary"> Rich
+      <label for="height">Height: Short
+        <input type="range" id="height" name="height" min="0" max="100"> Tall
+      </label>
+      <br>
+      <label for="salary">Salary: Poor
+        <input type="range" id="salary" name="salary" min="0" max="100"> Rich
+      </label>
     </fieldset>
 
     <fieldset>
       <legend>
         Your Contact Information
       </legend>
-      Email:
-      <input type="text" name="email">
-      <br> Mobile:
-      <input type="text" name="mobile">
-      <br> Address:
-      <textarea name="address" rows="2"></textarea>
+      <label for="email">Email: </label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <label for="mobile">Mobile: </label>
+      <input type="tel" id="mobile" name="mobile">
+      <br>
+      <label for="address">Address: </label>
+      <textarea id="address" name="address" rows="2"></textarea>
       <br> Method to contact you:
-      <input type="radio" name="contactEmail"> Email
-      <input type="radio" name="contactWhatsapp"> Whatsapp
-      <input type="radio" name="contactInapp"> In-app chat
+      <input type="checkbox" id="contactEmail" name="contactEmail">
+      <label for="contactEmail">Email</label>
+      <input type="checkbox" id="contactWhatsapp" name="contactWhatsapp">
+      <label for="contactWhatsapp">Whatsapp</label>
+      <input type="checkbox" id="contactInapp" name="contactInapp">
+      <label for="contactInapp">In-app chat</label>
     </fieldset>
     <input type="submit">
   </form>
