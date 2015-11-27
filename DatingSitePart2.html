@@ -38,9 +38,9 @@
       <label for="fileToUpload">Your image:</label>
       <input type="file" id="fileToUpload" name="fileToUpload" required>
       <br>
-      
+
       <label for="preview">Image preview:</label>
-      <img src="" id="preview">
+      <img id="preview">
     </fieldset>
 
     <fieldset>
@@ -48,50 +48,50 @@
         Your General Details
       </legend>
       <label for="name">Name:</label>
-      <input type="text" name="name" placeholder="Your full name" required>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
       <br>
 
       <label for="gender"> Gender:</label>
       <input type="radio" id="gender" name="gender" required>
-      <label for="gender" class="cbr">Male</label>
-      <input type="radio" id="gender" name="gender" required>
-      <label for="gender" class="cbr">Female</label>
-      <br>
+      <span class="cbr">Male</label>
+        <input type="radio" id="gender" name="gender" required>
+        <span class="cbr">Female</label>
+          <br>
 
-      <label for="">Age:</label>
-      <input type="number" id="age" name="age" min="0" max="100" value="18" required>
-      <br>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" min="0" max="100" value="18" required>
+          <br>
 
-      <label for="bday">Date of birth:</label>
-      <input type="date" id="bday" name="bday">
-      <br>
+          <label for="bday">Date of birth:</label>
+          <input type="date" id="bday" name="bday">
+          <br>
 
-      <label for="fcolor">Farorite color:</label>
-      <input type="color" id="fcolor" name="fcolor">
-      <br>
+          <label for="fcolor">Farorite color:</label>
+          <input type="color" id="fcolor" name="fcolor">
+          <br>
 
-      <label for="country">Which country:</label>
-      <select id="country" name="country">
-        <option value="none">
-          None
-        </option>
-        <option value="usa">
-          United States
-        </option>
-        <option value="vietnam">
-          Vietnam
-        </option>
-        <option value="england">
-          England
-        </option>
-        <option value="canada">
-          Canada
-        </option>
-        <option value="mexico">
-          Mexico
-        </option>
-      </select>
-      <br>
+          <label for="country">Which country:</label>
+          <select id="country" name="country">
+            <option value="none">
+              None
+            </option>
+            <option value="usa">
+              United States
+            </option>
+            <option value="vietnam">
+              Vietnam
+            </option>
+            <option value="england">
+              England
+            </option>
+            <option value="canada">
+              Canada
+            </option>
+            <option value="mexico">
+              Mexico
+            </option>
+          </select>
+          <br>
     </fieldset>
 
     <fieldset>
@@ -123,7 +123,7 @@
       <br>
 
       <label for="address">Address: </label>
-      <textarea id="address" name="address" rows="2"></textarea>
+      <textarea id="address" name="address" width="360px" height="50px"></textarea>
       <br>
 
       <label> Method to contact you:</label>
@@ -136,7 +136,6 @@
     </fieldset>
     <input type="submit">
   </form>
-
 </body>
 
 </html>
