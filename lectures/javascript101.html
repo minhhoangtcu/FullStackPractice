@@ -4,14 +4,24 @@ variable:
   var foo = ...;
   - only 3 types of variables: number, string and boolean
   var foo = ["", "", ""];
+  - array
   - able to push element into an array in javascript!
     + push: add to the end
     + unshift: add to the begin
     + pop: delete the last item
     + shift: delete the first item
     + concat: combine 2 arrays together
-    + pets.join(" stuff in between ") combine all elementals in an array together.
-    + pets.length: similar to java
+    + join(" stuff in between ") combine all elementals in an array together.
+    + length: similar to java
+    + sort
+    + indexOf
+    + slice()(start pos, end pos) similar to Array.rangeOf
+    + reverse()
+    + lastIndexOf()
+    + splice(start pos, end pos) this affect original array.
+    + forEach( do stuff ); it will execute a function for each value in the array.
+      It will put 3 inputs into the function: the element, index, and the array.
+    + map(); same as forEach, but it will return a result.
 
 function:
   function foo() {  }
@@ -29,6 +39,9 @@ condition:
 loop:
   while () {};
   do {} while ();
+  for (...;...;...) {}
+  for (... in array): gives index or left hand side.
+  for (... of array): gives the actual value
 
 debugging:
   console.log("to be or not to be");
