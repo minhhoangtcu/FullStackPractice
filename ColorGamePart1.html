@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta name="Minh Hoang" content="ColorGame">
+    <script>
+      var colors = ["blue","cyan", "gold", "gray", "green", "magenta", "orange", "red", "white", "yellow"];
+      var promptText = "I am thinking of one of these colors\n\n" +
+                       "blue, cyan, gold, gray, green, magenta, orange, red, white, yellow\n\n" +
+                       "What color am I thinking of?";
+      var notRegText = "Sorry, I don't recognize your color\n\n" +
+                       "Please try again.";
+      var incText = "Sorry, your guess is not correct!\n\n" +
+                    "Hint: your color is alphabetically $value than mine.\n\n" +
+                    "Please try again.";
+      var correctText = "Congratulation! You got the right answer.\n\n" +
+                        "It took you $numberOfGuesses guesses";
+      var closedText = "You closed the game. Refresh the page to start the game again."
+
+      function do_game() {
+        // Randomly choose a key in the range of 0 and number of colors-1
+        var keyIndex = Math.floor((Math.random() * (colors.length-1)));
+        alert("Color chosen by the program: " + colors[keyIndex]);
+        var isFinished = false;
+        var numberOfGuesses = 0;
+        while (!isFinished) {
+          var answer = prompt(promptText);
+          // if the user cancel the window, then the game ends
+          if (answer == null) {
+            alert(closedText);
+            break;
+          }
+
+          numberOfGuesses++;
+          if (colors.indexOf(answer) == keyIndex)
+            isFinished = true;
+        }
+      }
+
+    </script>
+  </head>
+  <body onload="do_game()">
+
+  </body>
+</html>
