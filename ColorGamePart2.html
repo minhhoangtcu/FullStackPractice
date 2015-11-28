@@ -44,8 +44,8 @@
         else if (more(answerIndex, keyIndex))
           alert(incText.replace("$value", "higher"));
         else {
-          myBody=document.getElementsByTagName("body")[0];
-          myBody.style.background=colors[answer];
+          var myBody = document.getElementsByTagName("body")[0];
+          myBody.style.background=answer;
           alert(correctText.replace("$numberOfGuesses", numberOfGuesses));
           return true;
         }
