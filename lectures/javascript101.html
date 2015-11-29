@@ -45,27 +45,3 @@ loop:
 
 debugging:
   console.log("to be or not to be");
-
-DOM:
-  locating nodes:
-    - Method1: use exact DOM path.
-    - Method2: use type - getElementsByTagName()
-      + might have many nodes with same tag
-    - Method3: use id - getElementById()
-  changing nodes:
-    .setAttribute("style", "color:red");
-    - .color or .scr are fine.
-  creating/adding nodes:
-    foo = document.createElement("div");
-                  .createTextNode("to be or not to be");
-    destParent = document.getElementsByTagName("body")[0]; // [0] means give the first body
-    destParent.insertBefore(foo, destParent.firstChild);
-    - can also use .appendChild() with get by Id. This put at the end of the element
-  deleting nodes:
-    node = getElementById("");
-    node.parentNode.removeChild(node);
-                                .firstChild
-  cloning nodes:
-    copying a node: node.cloneNode()
-    copying a branch: node.cloneNode(true)
-    adding node(s): dest.appendChild(node)
