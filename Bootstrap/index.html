@@ -68,8 +68,11 @@
             <div class="form-group">
               <input type="password" class="form-control" placeholder="Password">
             </div>
-            <div class="checkbox">
-              <label for=""><input type="checkbox"> <span style="color: white">Remember me</span></input></label>
+            <div class="form-group">
+              <label class="checkbox">
+                <input type="checkbox"></input>
+                <span style="color: white">Remember me</span>
+             </label>
             </div>
             <button type="submit" class="btn btn-primary">Sign in</button>
           </form>
@@ -95,7 +98,7 @@
         </div>
         <div class="col-xs-12 col-sm-2">
           <p style="padding:40px;"></p>
-          <a href="" class="btn btn-warning">Reserve Table</a>
+          <a href="#reserve-table" class="btn btn-block btn-warning">Reserve Table</a>
         </div>
       </div>
     </div>
@@ -162,7 +165,7 @@
       </div>
     </div>
 
-    <div class="row-content">
+    <div class="row-content" id="reserve-table">
       <div class="col-xs-12 col-sm-3">
         <p style="padding:20px;"></p>
         <h3 align="center">Reserve a table</h3>
@@ -182,8 +185,9 @@
               <label for="" class="radio-inline"><input type="radio" name="numberOfGuests"> 6 </input></label>
             </div>
           </div>
-          <div class="form-group">
-            <label for="date" class="col-sm-2 text-right">Date and Time</label>
+
+          <div class="form-group has-feedback">
+            <label for="date" class="col-sm-2 control-label">Date and Time</label>
             <div class="col-sm-4">
               <input type="date" class="form-control" id="date" placeholder="Date">
               <span class="glyphicon glyphicon-calendar form-control-feedback" style="right: 1em;"></span>
@@ -193,14 +197,16 @@
               <span class="glyphicon glyphicon-time form-control-feedback" style="right: 1em;"></span>
             </div>
           </div>
+
           <div class="form-group">
-            <div class="col-sm-offset-2">
+            <div class="col-sm-offset-2 col-sm-10">
               <button class="btn btn-primary" type="submit">Reserve</button>
             </div>
           </div>
+
           <div class="alert alert-warning alert-dismissible">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            Warning! Please <strong>call</strong> us to reserve for more than six guests.
+            <strong>Warning!</strong> Please <a href="tel:+85212345678" class="alert-link">call</a> us to reserve for more than six guests.
           </div>
         </form>
       </div>
