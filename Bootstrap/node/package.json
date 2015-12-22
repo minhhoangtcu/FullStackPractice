@@ -1,0 +1,11 @@
+{
+  "name": "quad",
+  "version": "1.0.0",
+  "description": "node module to calculate quad",
+  "main": "discriminant.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
